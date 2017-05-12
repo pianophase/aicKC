@@ -1,5 +1,3 @@
-## Robust AIC (based on Claeskens et al.)
-
 require(robustbase)
 
 AIC_S <- function(y, X, beta, scale, cc) {
