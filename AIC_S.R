@@ -1,6 +1,6 @@
 require(robustbase)
 
-AIC_S <- function(y, X, beta, scale, cc) {
+aicKC <- function(y, X, beta, scale, cc) {
     re  <- drop((y - X %*% beta) / scale)
     U2  <- Mchi(re, cc = cc, psi = 'bisquare', deriv = 2)
     U1  <- Mchi(re, cc = cc, psi = 'bisquare', deriv = 1)
