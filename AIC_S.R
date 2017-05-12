@@ -1,4 +1,7 @@
 ## Robust AIC (based on Claeskens et al.)
+
+require(robustbase)
+
 AIC_S <- function(y, X, beta, scale, cc) {
     re  <- drop((y - X %*% beta) / scale)
     U2  <- Mchi(re, cc = cc, psi = 'bisquare', deriv = 2)
